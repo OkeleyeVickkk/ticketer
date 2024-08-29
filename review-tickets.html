@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/style/splide.min.css" />
+		<link rel="stylesheet" href="./assets/style/default.css" />
+		<link rel="stylesheet" href="./assets/style/custom.css" />
+		<title>Create Ticket</title>
+	</head>
+	<body>
+		<div class="v-body-wrapper">
+			<header class="shadow-sm">
+				<nav class="d-flex align-items-center justify-content-between py-3 px-3">
+					<a href="">
+						<figure class="v-logo m-0 d-flex align-items-center justify-content-center">
+							<img src="./assets/images/logoPlaceholder.svg" alt="" class="img-fluid" />
+						</figure>
+					</a>
+					<div class="d-flex align-items-center column-gap-2">
+						<a href="./review-tickets.html" class="v-action-link">Next Page</a>
+					</div>
+				</nav>
+			</header>
+			<div class="d-flex align-items-center p-3" style="background-color: #1f262d">
+				<button type="button" class="v-go-back text-white d-flex align-items-center column-gap-2">
+					<span class="v-icon text-white" style="fill: var(--white)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+							<rect width="24" height="24" fill="none" />
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18l-6-6l6-6" />
+						</svg>
+					</span>
+					<span class="v-text d-none d-md-inline"> Go Back </span>
+				</button>
+				<h6 class="v-head-title text-white mx-auto fw-semibold">My Tickets</h6>
+			</div>
+		</div>
+		<div class="v-body-main">
+			<div class="container-xl">
+				<div class="row col-12 m-0 justify-content-center align-items-stretch">
+					<div class="col-md-7 col-lg-6 my-4 p-0">
+						<header class="v-pre-form-header mb-4">
+							<h5 class="v-title fw-semibold">Tickets</h5>
+						</header>
+						<div>
+							<section class="splide" aria-label="Splide Basic HTML Example">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<!-- v-each-slide @::start -->
+										<li class="splide__slide">
+											<div class="v-each-ticket-wrap">
+												<div class="v-header text-center py-3 text-white" style="background-color: #155fc8">
+													<span class="v-text">CARAT Member VIP Package</span>
+												</div>
+												<div class="v-neck d-flex align-items-center justify-content-center column-gap-4 text-white py-3">
+													<span class="v-each-items">
+														<span class="v-top">SEC</span>
+														<b class="v-bottom">A4</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">ROW</span>
+														<b class="v-bottom">5</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">SEAT</span>
+														<b class="v-bottom">2</b>
+													</span>
+												</div>
+												<div class="v-body">
+													<!-- v-each-item @::start -->
+													<div class="v-block-item rounded-0">
+														<div class="v-bg-image">
+															<img src="./assets/images/demo-image-2.jpg" alt="" class="img-fluid" />
+														</div>
+														<div class="v-block-content">
+															<h5 class="v-main-title" title="seventeen [right here] world tour in u.s">seventeen [right here] world tour in u.s</h5>
+															<span class="v-subtext">
+																<span class="v-datetime"> Sun, Nov 10, 7:30pm </span>
+																<span class="v-dot"> </span>
+																<span class="v-datetime"> BMO Stadium </span>
+															</span>
+														</div>
+													</div>
+													<!-- v-each-item @::end -->
+													<div class="px-4 py-3 text-center">
+														<small>Ticket will be ready in:</small>
+														<div class="d-flex align-items-center justify-content-center column-gap-4">
+															<span class="v-each-items">
+																<span class="v-top">85</span>
+																<small class="v-bottom">Days</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">3</span>
+																<small class="v-bottom">Hour</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">37</span>
+																<small class="v-bottom">Min</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">12</span>
+																<small class="v-bottom">Secs</small>
+															</span>
+														</div>
+													</div>
+													<div class="mb-3 col-9 mx-auto">
+														<figure class="v-barcode-image">
+															<div class="vertical-bar"></div>
+															<img src="./assets/images/scan-code.png" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+												<div class="v-footer">
+													<div class="v-base-footer">
+														<div class="d-flex align-items-center column-gap-3 text-center justify-content-evenly mt-3 mb-5">
+															<button type="button" class="text-capitalize">
+																<b>View Bardcode</b>
+															</button>
+															<button type="button" data-bs-toggle="modal" data-bs-target="#ticketDetails" class="text-capitalize">
+																<b>Ticket details</b>
+															</button>
+														</div>
+														<figure class="v-footer-image">
+															<img src="./assets/images/ticket-miaster-image.jpg" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- v-each-slide @::end -->
+										<!-- v-each-slide @::start -->
+										<li class="splide__slide">
+											<div class="v-each-ticket-wrap">
+												<div class="v-header text-center py-3 text-white" style="background-color: #155fc8">
+													<span class="v-text">CARAT Member VIP Package</span>
+												</div>
+												<div class="v-neck d-flex align-items-center justify-content-center column-gap-4 text-white py-3">
+													<span class="v-each-items">
+														<span class="v-top">SEC</span>
+														<b class="v-bottom">A4</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">ROW</span>
+														<b class="v-bottom">5</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">SEAT</span>
+														<b class="v-bottom">2</b>
+													</span>
+												</div>
+												<div class="v-body">
+													<!-- v-each-item @::start -->
+													<div class="v-block-item rounded-0">
+														<div class="v-bg-image">
+															<img src="./assets/images/demo-image-2.jpg" alt="" class="img-fluid" />
+														</div>
+														<div class="v-block-content">
+															<h5 class="v-main-title" title="seventeen [right here] world tour in u.s">seventeen [right here] world tour in u.s</h5>
+															<span class="v-subtext">
+																<span class="v-datetime"> Sun, Nov 10, 7:30pm </span>
+																<span class="v-dot"> </span>
+																<span class="v-datetime"> BMO Stadium </span>
+															</span>
+														</div>
+													</div>
+													<!-- v-each-item @::end -->
+													<div class="px-4 py-3 text-center">
+														<small>Ticket will be ready in:</small>
+														<div class="d-flex align-items-center justify-content-center column-gap-4">
+															<span class="v-each-items">
+																<span class="v-top">85</span>
+																<small class="v-bottom">Days</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">3</span>
+																<small class="v-bottom">Hour</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">37</span>
+																<small class="v-bottom">Min</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">12</span>
+																<small class="v-bottom">Secs</small>
+															</span>
+														</div>
+													</div>
+													<div class="mb-3 col-9 mx-auto">
+														<figure class="v-barcode-image">
+															<div class="vertical-bar"></div>
+															<img src="./assets/images/scan-code.png" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+												<div class="v-footer">
+													<div class="v-base-footer">
+														<div class="d-flex align-items-center column-gap-3 text-center justify-content-evenly mt-3 mb-5">
+															<button type="button" class="text-capitalize">
+																<b>View Bardcode</b>
+															</button>
+															<button type="button" data-bs-toggle="modal" data-bs-target="#ticketDetails" class="text-capitalize">
+																<b>Ticket details</b>
+															</button>
+														</div>
+														<figure class="v-footer-image">
+															<img src="./assets/images/ticket-miaster-image.jpg" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- v-each-slide @::end -->
+										<!-- v-each-slide @::start -->
+										<li class="splide__slide">
+											<div class="v-each-ticket-wrap">
+												<div class="v-header text-center py-3 text-white" style="background-color: #155fc8">
+													<span class="v-text">CARAT Member VIP Package</span>
+												</div>
+												<div class="v-neck d-flex align-items-center justify-content-center column-gap-4 text-white py-3">
+													<span class="v-each-items">
+														<span class="v-top">SEC</span>
+														<b class="v-bottom">A4</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">ROW</span>
+														<b class="v-bottom">5</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">SEAT</span>
+														<b class="v-bottom">2</b>
+													</span>
+												</div>
+												<div class="v-body">
+													<!-- v-each-item @::start -->
+													<div class="v-block-item rounded-0">
+														<div class="v-bg-image">
+															<img src="./assets/images/demo-image-2.jpg" alt="" class="img-fluid" />
+														</div>
+														<div class="v-block-content">
+															<h5 class="v-main-title" title="seventeen [right here] world tour in u.s">seventeen [right here] world tour in u.s</h5>
+															<span class="v-subtext">
+																<span class="v-datetime"> Sun, Nov 10, 7:30pm </span>
+																<span class="v-dot"> </span>
+																<span class="v-datetime"> BMO Stadium </span>
+															</span>
+														</div>
+													</div>
+													<!-- v-each-item @::end -->
+													<div class="px-4 py-3 text-center">
+														<small>Ticket will be ready in:</small>
+														<div class="d-flex align-items-center justify-content-center column-gap-4">
+															<span class="v-each-items">
+																<span class="v-top">85</span>
+																<small class="v-bottom">Days</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">3</span>
+																<small class="v-bottom">Hour</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">37</span>
+																<small class="v-bottom">Min</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">12</span>
+																<small class="v-bottom">Secs</small>
+															</span>
+														</div>
+													</div>
+													<div class="mb-3 col-9 mx-auto">
+														<figure class="v-barcode-image">
+															<div class="vertical-bar"></div>
+															<img src="./assets/images/scan-code.png" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+												<div class="v-footer">
+													<div class="v-base-footer">
+														<div class="d-flex align-items-center column-gap-3 text-center justify-content-evenly mt-3 mb-5">
+															<button type="button" class="text-capitalize">
+																<b>View Bardcode</b>
+															</button>
+															<button type="button" data-bs-toggle="modal" data-bs-target="#ticketDetails" class="text-capitalize">
+																<b>Ticket details</b>
+															</button>
+														</div>
+														<figure class="v-footer-image">
+															<img src="./assets/images/ticket-miaster-image.jpg" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- v-each-slide @::end -->
+										<!-- v-each-slide @::start -->
+										<li class="splide__slide">
+											<div class="v-each-ticket-wrap">
+												<div class="v-header text-center py-3 text-white" style="background-color: #155fc8">
+													<span class="v-text">CARAT Member VIP Package</span>
+												</div>
+												<div class="v-neck d-flex align-items-center justify-content-center column-gap-4 text-white py-3">
+													<span class="v-each-items">
+														<span class="v-top">SEC</span>
+														<b class="v-bottom">A4</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">ROW</span>
+														<b class="v-bottom">5</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">SEAT</span>
+														<b class="v-bottom">2</b>
+													</span>
+												</div>
+												<div class="v-body">
+													<!-- v-each-item @::start -->
+													<div class="v-block-item rounded-0">
+														<div class="v-bg-image">
+															<img src="./assets/images/demo-image-2.jpg" alt="" class="img-fluid" />
+														</div>
+														<div class="v-block-content">
+															<h5 class="v-main-title" title="seventeen [right here] world tour in u.s">seventeen [right here] world tour in u.s</h5>
+															<span class="v-subtext">
+																<span class="v-datetime"> Sun, Nov 10, 7:30pm </span>
+																<span class="v-dot"> </span>
+																<span class="v-datetime"> BMO Stadium </span>
+															</span>
+														</div>
+													</div>
+													<!-- v-each-item @::end -->
+													<div class="px-4 py-3 text-center">
+														<small>Ticket will be ready in:</small>
+														<div class="d-flex align-items-center justify-content-center column-gap-4">
+															<span class="v-each-items">
+																<span class="v-top">85</span>
+																<small class="v-bottom">Days</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">3</span>
+																<small class="v-bottom">Hour</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">37</span>
+																<small class="v-bottom">Min</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">12</span>
+																<small class="v-bottom">Secs</small>
+															</span>
+														</div>
+													</div>
+													<div class="mb-3 col-9 mx-auto">
+														<figure class="v-barcode-image">
+															<div class="vertical-bar"></div>
+															<img src="./assets/images/scan-code.png" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+												<div class="v-footer">
+													<div class="v-base-footer">
+														<div class="d-flex align-items-center column-gap-3 text-center justify-content-evenly mt-3 mb-5">
+															<button type="button" class="text-capitalize">
+																<b>View Bardcode</b>
+															</button>
+															<button type="button" data-bs-toggle="modal" data-bs-target="#ticketDetails" class="text-capitalize">
+																<b>Ticket details</b>
+															</button>
+														</div>
+														<figure class="v-footer-image">
+															<img src="./assets/images/ticket-miaster-image.jpg" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- v-each-slide @::end -->
+										<!-- v-each-slide @::start -->
+										<li class="splide__slide">
+											<div class="v-each-ticket-wrap">
+												<div class="v-header text-center py-3 text-white" style="background-color: #155fc8">
+													<span class="v-text">CARAT Member VIP Package</span>
+												</div>
+												<div class="v-neck d-flex align-items-center justify-content-center column-gap-4 text-white py-3">
+													<span class="v-each-items">
+														<span class="v-top">SEC</span>
+														<b class="v-bottom">A4</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">ROW</span>
+														<b class="v-bottom">5</b>
+													</span>
+													<span class="v-each-items">
+														<span class="v-top">SEAT</span>
+														<b class="v-bottom">2</b>
+													</span>
+												</div>
+												<div class="v-body">
+													<!-- v-each-item @::start -->
+													<div class="v-block-item rounded-0">
+														<div class="v-bg-image">
+															<img src="./assets/images/demo-image-2.jpg" alt="" class="img-fluid" />
+														</div>
+														<div class="v-block-content">
+															<h5 class="v-main-title" title="seventeen [right here] world tour in u.s">seventeen [right here] world tour in u.s</h5>
+															<span class="v-subtext">
+																<span class="v-datetime"> Sun, Nov 10, 7:30pm </span>
+																<span class="v-dot"> </span>
+																<span class="v-datetime"> BMO Stadium </span>
+															</span>
+														</div>
+													</div>
+													<!-- v-each-item @::end -->
+													<div class="px-4 py-3 text-center">
+														<small>Ticket will be ready in:</small>
+														<div class="d-flex align-items-center justify-content-center column-gap-4">
+															<span class="v-each-items">
+																<span class="v-top">85</span>
+																<small class="v-bottom">Days</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">3</span>
+																<small class="v-bottom">Hour</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">37</span>
+																<small class="v-bottom">Min</small>
+															</span>
+															<span class="v-each-items">
+																<span class="v-top">12</span>
+																<small class="v-bottom">Secs</small>
+															</span>
+														</div>
+													</div>
+													<div class="mb-3 col-9 mx-auto">
+														<figure class="v-barcode-image">
+															<div class="vertical-bar"></div>
+															<img src="./assets/images/scan-code.png" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+												<div class="v-footer">
+													<div class="v-base-footer">
+														<div class="d-flex align-items-center column-gap-3 text-center justify-content-evenly mt-3 mb-5">
+															<button type="button" class="text-capitalize">
+																<b>View Bardcode</b>
+															</button>
+															<button type="button" data-bs-toggle="modal" data-bs-target="#ticketDetails" class="text-capitalize">
+																<b>Ticket details</b>
+															</button>
+														</div>
+														<figure class="v-footer-image">
+															<img src="./assets/images/ticket-miaster-image.jpg" alt="" class="img-fluid" />
+														</figure>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- v-each-slide @::end -->
+									</ul>
+								</div>
+							</section>
+						</div>
+						<div class="v-actioners col-md-9 col-lg-10 mx-auto">
+							<button type="button" class="v-action" data-bs-toggle="offcanvas" data-bs-target="#TransferTicketSelection">Transfer</button>
+							<button type="button" class="v-action" disabled>Sell</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- modal @::start -->
+			<div class="modal fade" id="ticketDetails" tabindex="-1" aria-labelledby="ticketDetailsLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header border-0">
+							<h1 class="modal-title fs-5" id="ticketDetailsLabel">Ticket Details</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<ul class="v-listed-item">
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Seat</b>
+									<span class="v-item-value">A5/5/2</span>
+								</li>
+								<!-- each item @::end -->
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Entry Info</b>
+									<span class="v-item-value">Section A4</span>
+								</li>
+								<!-- each item @::end -->
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Ticket Info</b>
+									<span class="v-item-value">Section A4</span>
+								</li>
+								<!-- each item @::end -->
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Barcode Number</b>
+									<span class="v-item-value">Section A4</span>
+								</li>
+								<!-- each item @::end -->
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Order Number</b>
+									<span class="v-item-value">Section A4</span>
+								</li>
+								<!-- each item @::end -->
+								<!-- each item @::start -->
+								<li class="v-each-item">
+									<b class="v-item-title">Ticket Type</b>
+									<span class="v-item-value">Section A4</span>
+								</li>
+								<!-- each item @::end -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- modal @::end -->
+			<!-- offcanvas @::start -->
+			<div
+				class="offcanvas offcanvas-end"
+				data-bs-backdrop="static"
+				tabindex="-1"
+				id="TransferTicketSelection"
+				aria-labelledby="TransferTicketSelectionLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="TransferTicketSelectionLabel">Select Ticket(s)</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div class="v-caution-banner">
+						<span class="v-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+								<rect width="24" height="24" fill="none" />
+								<g fill="none">
+									<path
+										d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+									<path
+										fill="currentColor"
+										d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 13a1 1 0 1 0 0 2a1 1 0 0 0 0-2m0-9a1 1 0 0 0-.993.883L11 7v6a1 1 0 0 0 1.993.117L13 13V7a1 1 0 0 0-1-1" />
+								</g>
+							</svg>
+						</span>
+						<span class="v-text"> Only transfer tickets to people you know and trust to ensure everyone stays safe and socially distanced. </span>
+					</div>
+					<section class="mt-4">
+						<header class="v-ticket-display-header d-flex align-items-center justify-content-between">
+							<span class="v-left">Sec, Row</span>
+							<div class="d-flex align-items-center column-gap-2 v-tickety-amt">
+								<span class="v-icon">
+									<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M490.18,181.4l-44.13-44.13a20,20,0,0,0-27-1,30.81,30.81,0,0,1-41.68-1.6h0A30.81,30.81,0,0,1,375.77,93a20,20,0,0,0-1-27L330.6,21.82a19.91,19.91,0,0,0-28.13,0L232.12,92.16a39.87,39.87,0,0,0-9.57,15.5,7.71,7.71,0,0,1-4.83,4.83,39.78,39.78,0,0,0-15.5,9.58L21.82,302.47a19.91,19.91,0,0,0,0,28.13L66,374.73a20,20,0,0,0,27,1,30.69,30.69,0,0,1,43.28,43.28,20,20,0,0,0,1,27l44.13,44.13a19.91,19.91,0,0,0,28.13,0l180.4-180.4a39.82,39.82,0,0,0,9.58-15.49,7.69,7.69,0,0,1,4.84-4.84,39.84,39.84,0,0,0,15.49-9.57l70.34-70.35A19.91,19.91,0,0,0,490.18,181.4ZM261.81,151.75a16,16,0,0,1-22.63,0l-11.51-11.51a16,16,0,0,1,22.63-22.62l11.51,11.5A16,16,0,0,1,261.81,151.75Zm44,44a16,16,0,0,1-22.62,0l-11-11a16,16,0,1,1,22.63-22.63l11,11A16,16,0,0,1,305.83,195.78Zm44,44a16,16,0,0,1-22.63,0l-11-11a16,16,0,0,1,22.63-22.62l11,11A16,16,0,0,1,349.86,239.8Zm44.43,44.54a16,16,0,0,1-22.63,0l-11.44-11.5a16,16,0,1,1,22.68-22.57l11.45,11.49A16,16,0,0,1,394.29,284.34Z" />
+									</svg>
+								</span>
+								<span class="v-text">3 tickets</span>
+							</div>
+						</header>
+						<div class="v-main-tickets-display">
+							<label for="flexRadioDefault1" class="v-each-item">
+								<span class="form-check-label">Seat 1 </span>
+								<div class="v-form-input">
+									<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
+								</div>
+							</label>
+							<label for="flexRadioDefault2" class="v-each-item">
+								<span class="form-check-label">Seat 2 </span>
+								<div class="v-form-input">
+									<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" />
+								</div>
+							</label>
+							<label for="flexRadioDefault3" class="v-each-item">
+								<span class="form-check-label">Seat 3 </span>
+								<div class="v-form-input">
+									<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3" />
+								</div>
+							</label>
+							<label for="flexRadioDefault4" class="v-each-item">
+								<span class="form-check-label">Seat 4 </span>
+								<div class="v-form-input">
+									<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault4" />
+								</div>
+							</label>
+						</div>
+					</section>
+				</div>
+				<div class="offcanvas-footer mt-auto">
+					<span class="v-amt-selected">1 Selected</span>
+					<button type="button" class="v-offcanvas-footer-action v-carry-on" data-bs-target="#TransferTicket" data-bs-toggle="offcanvas">
+						Transfer to
+					</button>
+				</div>
+			</div>
+
+			<div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="TransferTicket" aria-labelledby="TransferTicketLabel">
+				<div class="offcanvas-header justify-content-between">
+					<button type="button" class="v-offcanvas-back" data-bs-toggle="offcanvas" data-bs-target="#TransferTicketSelection">
+						<span class="v-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+								<rect width="24" height="24" fill="none" />
+								<path
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M20 12H4m0 0l6-6m-6 6l6 6" />
+							</svg>
+						</span>
+					</button>
+					<h5 class="offcanvas-title fs-5 fw-semibold" id="TransferTicketLabel">Transfer Ticket</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<header>
+						<h5 class="v-title">Enter Beneficiary Details</h5>
+						<span class="opacity-75"> Or select from <button type="button" style="color: var(--primary-clr)">contact</button> </span>
+					</header>
+					<section class="mt-4">
+						<div class="v-main-tickets-display">
+							<form action="" class="d-flex flex-column row-gap-2">
+								<div class="v-form-input">
+									<label for="firstName" class="v-form-label">First Name</label>
+									<input type="text" class="form-control" placeholder="Enter beneficiary's first name" />
+								</div>
+								<div class="v-form-input">
+									<label for="firstName" class="v-form-label">Last Name</label>
+									<input type="text" class="form-control" placeholder="Enter beneficiary's last name" />
+								</div>
+								<div class="v-form-input">
+									<label for="firstName" class="v-form-label">Email or Phone No.</label>
+									<input type="text" class="form-control" placeholder="Enter beneficiary's contact address" />
+								</div>
+								<div class="v-form-input">
+									<label for="firstName" class="v-form-label">Note</label>
+									<textarea name="" rows="4" class="form-control" placeholder="Enter a note for beneficiary"></textarea>
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+				<div class="offcanvas-footer mt-auto">
+					<button type="button" class="v-offcanvas-footer-action v-carry-on">Transfer to</button>
+					<button type="button" class="v-offcanvas-footer-action v-cancel" data-bs-dismiss="offcanvas">Cancel</button>
+				</div>
+			</div>
+			<!-- offcanvas @::end -->
+		</div>
+		<script src="./assets/js/bootstrap.js"></script>
+		<script src="./assets/js/splide.min.js"></script>
+		<script>
+			new Splide(".splide", {
+				// autoplay: true,
+				perPage: 2,
+				perMove: 1,
+				type: "loop",
+				arrows: false,
+				rewind: true,
+				drag: "free",
+				focus: "center",
+				gap: "1rem",
+				breakpoints: {
+					1024: {
+						perPage: 1.6,
+						gap: ".7rem",
+					},
+					768: {
+						perPage: 1.2,
+						gap: ".7rem",
+					},
+					480: {
+						perPage: 1,
+						gap: ".7rem",
+					},
+				},
+			}).mount();
+		</script>
+		<script>
+			(function () {
+				const backBtn = document.querySelector(".v-go-back");
+				if ((null || undefined) === backBtn) return;
+				backBtn.addEventListener("click", () => window.history.back());
+			})();
+		</script>
+	</body>
+</html>
