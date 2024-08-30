@@ -86,11 +86,23 @@
 	max-width: 250px;
 }
 .v-each-ticket-wrap .v-barcode-image {
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+	display: grid;
+	grid-template-columns: 0fr;
+	position: relative;
+	transition: 2000ms ease;
+}
+.v-each-ticket-wrap .v-barcode-image .v-wrap-overflow {
+	overflow: hidden;
+	height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: relative;
-	/* width: 0%; */
+}
+.v-each-ticket-wrap .v-barcode-image.active {
+	grid-template-columns: 1fr;
 }
 .v-each-ticket-wrap .v-barcode-image .vertical-bar {
 	background-color: var(--primary-clr);
@@ -98,9 +110,25 @@
 	border-radius: 5px;
 	width: 4px;
 	position: absolute;
-	left: 5%;
-	transform: translate(0);
+	left: 0%;
+	top: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	pointer-events: none;
+}
+.v-each-ticket-wrap .v-barcode-image.active .vertical-bar {
+	opacity: 1;
+	pointer-events: auto;
 	animation: slideToRight 3000ms ease-in-out infinite alternate;
+}
+.v-each-ticket-wrap .v-barcode-image.active .vertical-bar {
+	transition: 300ms ease-in-out;
+}
+.v-each-ticket-wrap .v-barcode-image.active .vertical-bar.in-active {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
 .v-each-ticket-wrap .v-barcode-image .vertical-bar::after,
 .v-each-ticket-wrap .v-barcode-image .vertical-bar::before {
@@ -116,18 +144,22 @@
 	left: 0;
 	transform: translate(-100%, -50%);
 	background-image: linear-gradient(to right, rgba(var(--white-variant), 0.1), rgba(var(--primary-clr-variant), 0.5));
+}
+.v-each-ticket-wrap .v-barcode-image.active .vertical-bar::before {
 	animation: slideToRightBefore 3000ms ease-in-out infinite alternate;
 }
-
 .v-each-ticket-wrap .v-barcode-image .vertical-bar::after {
 	right: 0;
 	transform: translate(100%, -50%);
-	animation: slideToRightAfter 3000ms ease-in-out infinite alternate;
 	background-image: linear-gradient(to left, rgba(var(--white-variant), 0.1), rgba(var(--primary-clr-variant), 0.5));
 }
+.v-each-ticket-wrap .v-barcode-image.active .vertical-bar::after {
+	animation: slideToRightAfter 3000ms ease-in-out infinite alternate;
+}
 .v-each-ticket-wrap .v-barcode-image .img-fluid {
-	height: 70px;
-	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	object-position: center center;
 }
 @keyframes slideToRight {
 	0% {
@@ -387,6 +419,9 @@
 .v-each-ticket-wrap .v-header .v-text {
 	font-size: 0.9rem;
 }
+.v-each-ticket-wrap .v-hide-show:not(.active) {
+	display: none;
+}
 .splide__pagination {
 	margin-bottom: 1.8rem;
 }
@@ -394,10 +429,28 @@
 	background-color: var(--primary-clr);
 }
 .v-base-footer button {
-	transition: 300ms ease-in-out;
+	/* transition: 300ms ease-in-out; */
 }
-.v-base-footer button:hover {
+.v-base-footer button .v-icon {
+	color: var(--white);
+	fill: var(--white);
+}
+.v-base-footer button:first-of-type {
+	background-color: var(--primary-clr);
+	color: var(--white);
+	padding: 10px 2rem;
+	border-radius: 3px;
+}
+.v-base-footer button:last-of-type:hover {
 	color: var(--primary-clr);
+}
+.v-base-footer .v-buttons-container {
+	row-gap: 10px;
+}
+.v-base-footer .v-bar-code {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
 }
 .modal .v-listed-item {
 	display: flex;

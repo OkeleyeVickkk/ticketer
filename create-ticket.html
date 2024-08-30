@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
 		<link rel="stylesheet" href="./assets/style/default.css" />
 		<link rel="stylesheet" href="./assets/style/custom.css" />
@@ -10,80 +12,68 @@
 	</head>
 	<body>
 		<div class="v-body-wrapper">
-			<header class="shadow-sm">
-				<nav class="d-flex py-3 px-3 align-items-center justify-content-between">
-					<a href="">
-						<figure class="v-logo m-0 d-flex align-items-center justify-content-center">
-							<img src="./assets/images/logoPlaceholder.svg" alt="" class="img-fluid" />
-						</figure>
-					</a>
-					<div class="d-flex align-items-center column-gap-2">
-						<a href="./review-tickets.html" class="v-action-link">Next Page</a>
-					</div>
-				</nav>
-			</header>
-		</div>
-		<div class="v-body-main">
-			<div class="container-xl">
-				<div class="row col-12 m-0 justify-content-center align-items-stretch">
-					<div class="col-lg-7 col-xl-5 mt-4 p-0">
-						<header class="v-pre-form-header mb-4">
-							<h5 class="v-title fw-semibold">Create or Buy Ticket sha</h5>
-						</header>
-						<form action="" class="v-ticket-form d-flex flex-column row-gap-2 mb-4">
-							<div class="d-flex align-items-center column-gap-md-3 row-gap-2 flex-wrap">
-								<div class="v-form-input col-12 col-md">
-									<label for="" class="v-label">Sec</label>
+			<div class="v-body-main mt-sm-5 mt-2 pt-1 pb-5">
+				<div class="container-xl">
+					<div class="row col-12 m-0 justify-content-center align-items-stretch">
+						<div class="col-lg-6 col-xl-4 mt-4 p-0">
+							<!-- <header class="v-pre-form-header mb-4">
+								<h5 class="v-title fw-semibold">Create or Buy Ticket sha</h5>
+							</header> -->
+							<form action="" class="v-ticket-form d-flex flex-column row-gap-2 mb-4">
+								<div class="d-flex align-items-center column-gap-md-3 row-gap-2 flex-wrap">
+									<div class="v-form-input col-12 col-md">
+										<label for="" class="v-label">Sec</label>
+										<input type="text" class="form-control" />
+									</div>
+									<div class="v-form-input col-12 col-md">
+										<label for="" class="v-label">Row</label>
+										<input type="text" class="form-control" />
+									</div>
+									<div class="v-form-input col-12 col-md">
+										<label for="" class="v-label">Sit</label>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<div class="v-form-input">
+									<label for="" class="v-label">How many tickets?</label>
+									<select class="form-select">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+									</select>
+								</div>
+								<div class="v-form-input">
+									<label for="" class="v-label">Other SIT (Optional)</label>
 									<input type="text" class="form-control" />
 								</div>
-								<div class="v-form-input col-12 col-md">
-									<label for="" class="v-label">Row</label>
-									<input type="text" class="form-control" />
+								<div class="v-form-input">
+									<label for="" class="v-label">Title</label>
+									<input type="text" class="form-control" placeholder="Enter title" />
 								</div>
-								<div class="v-form-input col-12 col-md">
-									<label for="" class="v-label">Sit</label>
-									<input type="text" class="form-control" />
+								<div class="v-form-input">
+									<label for="" class="v-label">Venue</label>
+									<input type="text" class="form-control" placeholder="Enter location" />
 								</div>
-							</div>
-							<div class="v-form-input">
-								<label for="" class="v-label">How many tickets?</label>
-								<select class="form-select">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
-							</div>
-							<div class="v-form-input">
-								<label for="" class="v-label">Other SIT (Optional)</label>
-								<input type="text" class="form-control" />
-							</div>
-							<div class="v-form-input">
-								<label for="" class="v-label">Title</label>
-								<input type="text" class="form-control" placeholder="Enter title" />
-							</div>
-							<div class="v-form-input">
-								<label for="" class="v-label">Venue</label>
-								<input type="text" class="form-control" placeholder="Enter location" />
-							</div>
-							<div class="v-form-input">
-								<label for="" class="v-label">Image URL</label>
-								<input type="url" class="form-control" placeholder="Enter image link" />
-							</div>
-							<div class="d-flex align-items-center column-gap-3 flex-wrap row-gap-2">
-								<div class="v-form-input col-12 col-md">
-									<label for="" class="v-label">Date </label>
-									<input type="date" class="form-control" placeholder="" />
+								<div class="v-form-input">
+									<label for="" class="v-label">Image URL</label>
+									<input type="url" class="form-control" placeholder="Enter image link" />
 								</div>
-								<div class="v-form-input col-12 col-md">
-									<label for="" class="v-label"> Time</label>
-									<input type="time" class="form-control" placeholder="" />
+								<div class="d-flex align-items-center column-gap-3 flex-wrap row-gap-2">
+									<div class="v-form-input col-12 col-md">
+										<label for="" class="v-label">Date </label>
+										<input type="date" class="form-control" placeholder="" />
+									</div>
+									<div class="v-form-input col-12 col-md">
+										<label for="" class="v-label"> Time</label>
+										<input type="time" class="form-control" placeholder="" />
+									</div>
 								</div>
-							</div>
-							<div class="v-action-container mt-3">
-								<button class="v-action" type="button">Create or Buy</button>
-							</div>
-						</form>
+								<div class="v-action-container mt-3">
+									<button class="v-action" type="button">Create or Buy</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
