@@ -15,6 +15,30 @@
 .v-body-wrapper nav .v-action-link:active {
 	transform: scale(0.92, 0.92);
 }
+.nav-pills .nav-item {
+	flex-grow: 1;
+}
+.nav-pills .nav-link {
+	width: 100%;
+	border-radius: 0;
+	color: var(--white);
+	position: relative;
+	padding: 13px 0;
+}
+.nav-pills .nav-link::before {
+	content: "";
+	width: 100%;
+	background-color: var(--white);
+	height: 4px;
+	left: 0;
+	bottom: 0px;
+	right: 0;
+	position: absolute;
+	display: none;
+}
+.nav-pills .nav-link.active::before {
+	display: block;
+}
 .v-aside-inner {
 	padding: 1rem;
 	display: flex;
