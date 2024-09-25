@@ -1,5 +1,6 @@
 .v-body-wrapper {
 	animation: toTop 350ms ease;
+	padding-bottom: 2.6rem;
 }
 @keyframes toTop {
 	from {
@@ -671,4 +672,37 @@
 	text-decoration: underline;
 	color: var(--primary-clr);
 	text-decoration-color: var(--primary-clr);
+}
+.v-footer {
+	position: fixed;
+	width: 100%;
+	background-color: var(--white);
+	bottom: 0;
+}
+.v-footer .v-list-footer-links {
+	padding: 14px 5px;
+	display: flex;
+	flex-wrap: nowrap;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.v-footer .v-list-footer-links .v-text {
+	font-size: 0.8rem;
+	letter-spacing: -0.3px;
+}
+.v-footer .v-list-footer-links .v-icon svg {
+	--size: 1.25rem;
+}
+.v-footer .v-list-footer-links .v-footer-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: 300ms ease-in-out;
+}
+.v-footer .v-list-footer-links .v-footer-link:not(.active) {
+	color: #2228;
+}
+.v-footer .v-list-footer-links .v-footer-link.active,
+.v-footer .v-list-footer-links .v-footer-link:hover {
+	color: var(--primary-clr);
 }
