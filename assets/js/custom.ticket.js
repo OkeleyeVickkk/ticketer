@@ -34,22 +34,25 @@ if ((null || undefined) != splide) {
 }
 
 if (allBlockItems.length) {
-	allBlockItems.forEach((blockItem, index, parentArr) => {
+	allBlockItems.forEach((blockItem) => {
 		const viewBarCodeBtn = blockItem.querySelector(".v-footer .v-bar-code");
 
-		if (viewBarCodeBtn != (null || undefined)) {
-			viewBarCodeBtn.addEventListener("click", function () {
-				const barCodeContainer = blockItem.querySelector(".v-hide-show");
-				const barCode = blockItem.querySelector(".v-barcode-image");
-				const verticalBar = blockItem.querySelector(".vertical-bar");
-				if (barCode.classList.contains("active") || barCodeContainer.classList.contains("active")) return;
+		if (viewBarCodeBtn == (null || undefined)) return;
+		viewBarCodeBtn.addEventListener("click", function () {
+			const barCodeContainer = blockItem.querySelector(".v-hide-show");
+			const barCode = blockItem.querySelector(".v-barcode-image");
+			const verticalBar = blockItem.querySelector(".vertical-bar");
+			if (barCode.classList.contains("active") || barCodeContainer.classList.contains("active")) {
+				barCode.classList.remove("active");
+				barCodeContainer.classList.remove("active");
+			} else {
 				barCode.classList.add("active");
 				barCodeContainer.classList.add("active");
+			}
 
-				setTimeout(() => {
-					verticalBar.classList.add("in-active");
-				}, 3500 * 2);
-			});
-		}
+			setTimeout(() => {
+				verticalBar.classList.add("in-active");
+			}, 3500 * 2);
+		});
 	});
 }
