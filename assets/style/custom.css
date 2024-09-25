@@ -673,6 +673,20 @@
 	color: var(--primary-clr);
 	text-decoration-color: var(--primary-clr);
 }
+.v-tags-container::-webkit-scrollbar {
+	height: 0;
+}
+.v-tags-container .v-each-tag {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 1.5rem;
+	border: 1px solid rgba(var(--white-variant), 0.8);
+	border-radius: 4px;
+	font-size: 0.9rem;
+	color: var(--white);
+	white-space: nowrap;
+}
 .v-footer {
 	position: fixed;
 	width: 100%;
